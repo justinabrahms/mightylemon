@@ -81,6 +81,7 @@ INSTALLED_APPS = (
    "mailer",
    "comment_utils",
    "gravatar",
+   "solango",
    "springsteen",
    
    "django.contrib.admin",
@@ -90,6 +91,11 @@ INSTALLED_APPS = (
    "django.contrib.sessions",
    "django.contrib.sites",
 )
+
+try:
+    from solango_settings import *
+except ImportError:
+    pass
 
 try:
     from local_settings import *
