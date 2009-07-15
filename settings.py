@@ -87,26 +87,27 @@ MEDIA_ROOT = os.path.realpath(os.path.join(THEME_DIR, "static"))
 STATS_CODE = ""  # contains stats tracking code
 
 INSTALLED_APPS = (
-   "blog",
-   "links",
-   "aggregator",
-   "wsgi",
-   "authors",
-   "events",
-   
-   "tagging",
-   "mailer",
-   "comment_utils",
-   "gravatar",
+    "blog",
+    "links",
+    "aggregator",
+    "wsgi",
+    "authors",
+    "events",
+    
+    "tagging",
+    "mailer",
+    "comment_utils",
+    "gravatar",
 
-   "elsewhere",
+    "elsewhere",
+    "django_extensions",
    
-   "django.contrib.admin",
-   "django.contrib.auth",
-   "django.contrib.contenttypes",
-   "django.contrib.comments",
-   "django.contrib.sessions",
-   "django.contrib.sites",
+    "django.contrib.admin",
+    "django.contrib.auth",
+    "django.contrib.contenttypes",
+    "django.contrib.comments",
+    "django.contrib.sessions",
+    "django.contrib.sites",
 )
 
 try:
