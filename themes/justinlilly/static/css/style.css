@@ -3,6 +3,7 @@
 
 /* GLOBAL */
 * { font-family: Helvetica, Arial, sans-serif; }
+em { color: white; }
 ul.inline { list-style-type: none; }
 ul.inline li { display: inline; }
 li, p { font-size: .8em; line-height: 1.6em; color: #ccc;}
