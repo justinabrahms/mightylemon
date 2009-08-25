@@ -12,6 +12,9 @@ li ul li { font-size: 1em; }
 a img { border: 0px; }
 dt, dd { padding: 5px; }
 
+.float-left { float: left; }
+.float-right { float: right; }
+
     /* COLORS */
     body { background-color: #202020; color: white;  }
     a { color: white; text-decoration: none; }
