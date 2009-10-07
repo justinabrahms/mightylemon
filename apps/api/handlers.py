@@ -17,7 +17,8 @@ class BlogPostHandler(BaseHandler):
         return obj_list
 
     def read(self, request, **kwargs):
-        if kwargs.get('post_slug', None):
+        post_slug = kwargs.get('post_slug', None)
+        if post_slug:
             post = get_object_or_404(Post, slug=post_slug, active=True)
             return post
         else:
