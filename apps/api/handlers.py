@@ -4,12 +4,12 @@ from blog.models import Post
 
 class AnonBlogPostHandler(AnonymousBaseHandler):
     model = Post
-    fields = ('title', 'body', 'tags', 'pub_date')
+    fields = ('title', 'tags', 'pub_date')
 
 class BlogPostHandler(BaseHandler):
     model = Post
     allowed_methods = ('GET',)
-    exclude = ('id','enable_comments','markup_type','create_date', 'permalink')
+    exclude = ('id','enable_comments','markup_type','create_date', 'permalink', 'body')
     anonymous = AnonBlogPostHandler
 
     def list(self, request):
