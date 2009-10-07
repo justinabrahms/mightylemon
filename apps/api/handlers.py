@@ -13,10 +13,6 @@ class BlogPostHandler(BaseHandler):
     fields = ('post_url','tags','title','blog_title','published_on','slug')
     anonymous = AnonBlogPostHandler
 
-    def list(self, request):
-        obj_list = Post.objects.filter(active=True)
-        return obj_list
-
     @classmethod
     def published_on(self, post_obj):
         return post_obj.pub_date
@@ -30,6 +26,7 @@ class BlogPostHandler(BaseHandler):
         return post_obj.get_absolute_url()
 
     def read(self, request, **kwargs):
+        # FIXME: This really should be 2 views and offer differing information.
         post_slug = kwargs.get('post_slug', None)
         if post_slug:
             post = get_object_or_404(Post, slug=post_slug, active=True)
