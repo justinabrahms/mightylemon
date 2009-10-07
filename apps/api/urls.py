@@ -6,7 +6,7 @@ from api.handlers import BlogPostHandler
 blogpost_handler = Resource(BlogPostHandler)
 
 urlpatterns = patterns('',
-    url('posts/(?P<post_slug>[-\w]+)/$', blogpost_handler, {'emitter_format':'xml'}),
-    url('posts/$', blogpost_handler, {'emitter_format':'xml'}),
+    url('posts/(?P<post_slug>[-\w]+)/$', blogpost_handler, {'emitter_format':'json'}),
+    url('posts/$', blogpost_handler, {'emitter_format':'json'}),
 )
                         
