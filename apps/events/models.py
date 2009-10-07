@@ -22,6 +22,6 @@ class Event(models.Model):
         return False
     
     def __unicode__(self):
-        return "%s on %s" % (self.name, self.when)
+        return "%s on %s" % (self.name, self.start_date)
     
     
