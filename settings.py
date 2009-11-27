@@ -92,7 +92,6 @@ INSTALLED_APPS = (
     "authors",
     "links",
     "tagging",
-    "aggregator",
     "comment_utils",
     "gravatar",
 
