@@ -87,18 +87,18 @@ MEDIA_ROOT = os.path.realpath(os.path.join(THEME_DIR, "static"))
 STATS_CODE = ""  # contains stats tracking code
 
 INSTALLED_APPS = (
+    # Blog functionality
     "blog",
-    "links",
-    "aggregator",
-    "wsgi",
     "authors",
-    
+    "links",
     "tagging",
-    "mailer",
+    "aggregator",
     "comment_utils",
     "gravatar",
 
-    "elsewhere",
+    # misc. extras
+    "wsgi",
+    "mailer",
     "django_extensions",
    
     "django.contrib.admin",
