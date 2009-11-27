@@ -94,6 +94,8 @@ INSTALLED_APPS = (
     "tagging",
     "comment_utils",
     "gravatar",
+    "portfolio",
+    "typogrify",
 
     # misc. extras
     "wsgi",
