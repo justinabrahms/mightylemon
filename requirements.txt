@@ -12,4 +12,6 @@ http://django-tagging.googlecode.com/svn/trunk/
 -e git+git://github.com/django-extensions/django-extensions.git#egg=django-extensions
 -e hg+http://bitbucket.org/jespern/django-piston/#egg=django_piston
 http://dist.repoze.org/PIL-1.1.6.tar.gz
-
+-e hg+https://sorl-thumbnail.googlecode.com/hg/#egg=sorl_thumbnail
+-e svn+http://typogrify.googlecode.com/svn/trunk/#egg=typogrify
+smartypants
