@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+{% load blog_utils typogrify %}
+
+{% block body_id %}writing-detail{% endblock %}
+
+{% block content %}
+<div id="content" class="grid_16">
+  <div class="grid_4 alpha">
+    <h3 class="grid_4 alpha coufon">{{ post.title|typogrify }}</h3>
+    <h5 class="date">{{ post.pub_date|date:"F jS, Y" }}</h5>
+  </div>
+  <div class="grid_9">
+    {{ post|to_html|typogrify }}
+  </div>
+  <div id="detail-sidebar" class="sidebar grid_3 omega">
+    <div>
+      <h3 class="header">By Date</h3>
+      <ul>
+        <li><a href="#">October 2009</a></li>
+        <li><a href="#">September 2009</a></li>
+        <li><a href="#">August 2009</a></li>
+      </ul>
+    </div>
+    <div>
+      <hr class="blank" />
+      <h3 class="header">By Tag</h3>
+      <ul>
+        <li><a href="#">Django</a></li>
+        <li><a href="#">NYC</a></li>
+        <li><a href="#">Productivity</a></li>
+      </ul>
+    </div>
+  </div>
+</div><!-- /#content -->
+{% endblock %}

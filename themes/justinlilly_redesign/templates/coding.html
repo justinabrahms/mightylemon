@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+
+{% block body_id %}coding{% endblock %}
+
+{% block content %}
+<div id="content" class="grid_16">
+  <div class="grid_10 alpha">
+    <div class="grid_5 alpha">
+      <h2 class="title coufon"><a href="#">django-gencal</a></h2>
+      <p>django-gencal is a library for outputting HTML Calendars based
+        on django QuerySet input.</p>
+      <hr class="blank" />
+      <h2 class="title coufon"><a href="#">dotfiles</a></h2>
+      <p>My dotfiles are tweaks and configs for small linux tools.</p>
+      <hr class="blank" />
+      <h2 class="title coufon"><a href="#">emacs</a></h2>
+      <p>Like all followers of emacs, this is my temple. Here I conduct
+        my rituals of shim-building and getting work done.</p>
+    </div>
+    <div class="grid_5 omega">
+      <h2 class="title coufon"><a href="coding-detail.html">emacs-brookstream</a></h2>
+      <p>My port of brookstream to emacs</p>
+      <hr class="blank" />
+      <h2 class="title coufon"><a href="#">vim</a></h2>
+      <p>A collection of vim customizations I've collected over
+        time.</p>
+      <hr class="blank" />
+      <h2 class="title coufon"><a href="#">multiwidget-demo</a></h2>
+      <p>A brief example of creating a django multi-widget as I found it
+        to be a rather confusing process at first.</p>
+    </div>
+  </div>
+  <div class="grid_6 omega sidebar">
+    <h1 class="header">Coding</h1>
+    <p>This a place for personal projects and code samples. All this
+    code is released under the BSD License unless otherwise noted.</p>
+
+  </div>
+</div><!-- /#content -->
+{% endblock %}

@@ -1,0 +1,270 @@
+@import url('reset.css');
+@import url('960.css');
+
+/*
+  Colors:
+  Green #1: b7c401
+  Brown (dk) #1: d6b789
+  Brown (lt) #2: b69e79
+  Black: 16140e
+  Cream: FFFFF0
+  Red: redorange; AKA 
+*/
+
+/* GLOBAL */
+html {
+    padding-bottom: 0;
+    margin-bototm: 0;
+}
+body {
+    font-family: Georgia, "Times New Roman", Times, serif;
+    color: #333;
+    background-color: #FFFFF0;
+    line-height: 1.6em
+}
+h1 { 
+    font-size: 2em;
+}
+h2 {
+    padding-bottom: 10px;
+    font-size: 1.8em;
+}
+h3 {
+    font-size: 1.2em;
+}
+p {
+    padding-bottom: 15px;
+}
+a {
+    text-decoration: none;
+    color: #b7c401;
+}
+a:hover {
+    color: orangered;
+}
+#content a {
+    text-decoration: underline;
+    color: orangered;
+}
+#content a:hover {
+    text-decoration: none;
+}
+
+/* HEADER */
+#header {
+    background-color: #16140e;
+    width: 100%;
+}
+#masthead {
+    width: 960px;
+    margin: auto;
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+}
+#logo {
+    color: #b69e79;
+    float: left;
+    text-indent: -9999px;
+    display: none; /* logo looks godawful. Will remove this when it doesn't. */
+}
+#nav {
+    list-style-type: none;
+    display: inline;
+    float: right;
+    padding-top: 25px;
+}
+#nav li {
+    display: inline;
+    padding: 10px;
+    float: left;
+}
+#nav li a {
+    display: block;
+    padding-top: 10px;
+}
+
+#home #nav_home,
+#writing #nav_writing,
+#writing-detail #nav_writing,
+#coding #nav_coding,
+#work #nav_work,
+#speaking #nav_speaking,
+#about #nav_about {
+    color: #FFFFF0;
+}
+
+/* Homepage */
+#home li h2 {
+    padding: 10px 0;
+}
+/* POST MODULE */
+#writing .post {
+    margin: 10px 0;
+    min-height: 250px;
+}
+.title {
+    margin-bototm: 10px;
+    font-size: 1.2em;
+    color: #3c3226;
+}
+/* Over specific to override the content styling */
+#content .title a {
+    color: #3c3226;
+    text-decoration: none;
+}
+#content .title a:hover {
+    text-decoration: underline;
+}
+.date {
+    color: #ccc;
+    font-style: italic;
+    font-size: .9em;
+    margin-bottom: 10px;
+}
+.read_more {
+    font-style: italic;
+    margin-bottom: 20px;
+    display: block;
+    text-align: right;
+}
+p span {
+    font-size: .7em;
+}
+
+/* FOOTER */
+#footer {
+    background-color: #16140e;
+    width: 100%;
+    clear: both;
+    color: #eee;
+    border-top: 15px solid orangered;
+    padding: 20px 0;
+    margin-top: 10px;
+}
+#footer p {
+    color: #b69e79;
+    font-size: .9em;
+}
+#footer h4 {
+    padding: 10px 0;
+}
+#footer li {
+    font-size: .9em;
+}
+#footer-branding {
+    padding: 20px 0;
+}
+
+/* Blog Detail */
+#writing-detail .date {
+    padding: 10px 0;
+    display: block;
+    clear: both;
+}
+#writing-detail code,
+#writing-detail pre {
+    width: 460px;
+    overflow: auto;
+}
+
+/* About Page */
+#about #about_photo {
+    display: block;
+    margin-bottom: 10px;
+    padding: 3px;
+    border: 1px solid #d6b789;;
+    float: right;
+}
+
+/* Work Page */
+#work .client_name,
+#coding #project_name,
+#speaking .conference_name {
+    text-align: right;
+}
+#work dt {
+    font-weight: bold;
+}
+#work dd {
+    padding-left: 10px;
+}
+
+/* Coding */
+#project_info {
+    padding-bottom: 10px;
+}
+#project_info h5 {
+    font-variant: small-caps;
+    color: #b7c401;
+    text-align: center;
+}
+#project_info h6 {
+    font-weight: normal;
+    text-align: center;
+}
+.gist {
+    font-size: .8em;
+    width: 80%;
+    margin: auto;
+}
+
+/* Sidebar Elements */
+.header {
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 5px;
+    color: #16140e;
+}    
+.sidebar li {
+    border-bottom: 1px solid #ccc;
+    padding: 5px;
+}
+.sidebar dt {
+    padding: 10px;
+    font-weight: bold;
+}
+.sidebar dd {
+    border-bottom: 1px solid #ccc;
+    padding: 5px;
+    padding-left: 25px;
+}
+.sidebar a {
+    color: orangered;
+}
+.sidebar a:hover {
+    text-decoration: underline;
+}
+hr.blank {
+    margin: 15px;
+    visibility: hidden;
+    clear: both;
+}
+
+/* Carousel */
+.carousel-wrapper {
+    margin: 0 auto;
+    background-color: black;
+    position: relative;
+    margin-bottom: 10px;
+    min-height: 200px;
+}
+.carousel-wrapper .button {
+    position: absolute;
+    top: 45%;
+    z-index: 2;
+    font-size: 2em;
+}
+.carousel-wrapper .prev {
+    left: -15px;
+}
+.carousel-wrapper .next {
+    right: -15px;
+}
+    
+
+/* GLOBAL EXTRAS */
+.clearfix:after {
+    content: ".";
+    min-height: 1%;
+    display: block;
+    clear: both;
+}
