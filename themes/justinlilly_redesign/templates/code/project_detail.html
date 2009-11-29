@@ -4,10 +4,10 @@
 
 {% block content %}
 <div id="content" class="grid_16">
-  <div class="grid_4 alpha">
-    <h1 id="project_name">emacs</h1>
-  </div>
-  <div class="grid_12 omega">
+  <div class="prefix_2 grid_12 suffix_2">
+    <div style="text-align: center;">
+      <h1 id="project_name">{{ project.name }}</h1>
+    </div>
     <div id="project_info" class="clearfix">
       <div class="grid_3 alpha">
         <h5>Language</h5>
@@ -19,7 +19,11 @@
       </div>
       <div class="grid_3">
         <h5>Updated</h5>
+        {% if project.last_updated %}
         <h6>{{ project.last_updated|timesince }}"</h6>
+        {% else %}
+        <h6>?</h6>
+        {% endif %}
       </div>
       <div class="grid_3 omega">
         <h5>Liscence</h5>

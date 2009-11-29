@@ -6,7 +6,7 @@
   Green #1: b7c401
   Brown (dk) #1: d6b789
   Brown (lt) #2: b69e79
-  Black: 16140e
+  Black: 1a1006
   Cream: FFFFF0
   Red: redorange; AKA 
 */
@@ -43,16 +43,16 @@ a:hover {
     color: orangered;
 }
 #content a {
-    text-decoration: underline;
+    text-decoration: none;
     color: orangered;
 }
 #content a:hover {
-    text-decoration: none;
+    text-decoration: underline;
 }
 
 /* HEADER */
 #header {
-    background-color: #16140e;
+    background-color: #1a1006;
     width: 100%;
 }
 #masthead {
@@ -87,6 +87,7 @@ a:hover {
 #writing #nav_writing,
 #writing-detail #nav_writing,
 #coding #nav_coding,
+#sphinx #nav_coding,
 #work #nav_work,
 #speaking #nav_speaking,
 #about #nav_about {
@@ -100,7 +101,7 @@ a:hover {
 /* POST MODULE */
 #writing .post {
     margin: 10px 0;
-    min-height: 250px;
+    min-height: 200px;
 }
 .title {
     margin-bototm: 10px;
@@ -127,13 +128,10 @@ a:hover {
     display: block;
     text-align: right;
 }
-p span {
-    font-size: .7em;
-}
 
 /* FOOTER */
 #footer {
-    background-color: #16140e;
+    background-color: #1a1006;
     width: 100%;
     clear: both;
     color: #eee;
@@ -178,7 +176,6 @@ p span {
 
 /* Work Page */
 #work .client_name,
-#coding #project_name,
 #speaking .conference_name {
     text-align: right;
 }
@@ -190,6 +187,13 @@ p span {
 }
 
 /* Coding */
+#project_name {
+    text-align: center;
+    padding: 15px 0;
+}
+.code-project {
+    min-height: 150px;
+}
 #project_info {
     padding-bottom: 10px;
 }
@@ -202,8 +206,10 @@ p span {
     font-weight: normal;
     text-align: center;
 }
+#sphinx .highlight,
 .gist {
-    font-size: .8em;
+    font-size: 1em;
+    line-height: 1em;
     width: 80%;
     margin: auto;
 }
@@ -212,7 +218,7 @@ p span {
 .header {
     border-bottom: 1px solid #ccc;
     padding-bottom: 5px;
-    color: #16140e;
+    color: #1a1006;
 }    
 .sidebar li {
     border-bottom: 1px solid #ccc;
@@ -246,6 +252,7 @@ hr.blank {
     position: relative;
     margin-bottom: 10px;
     min-height: 200px;
+    height: 250px;
 }
 .carousel-wrapper .button {
     position: absolute;
@@ -267,4 +274,67 @@ hr.blank {
     min-height: 1%;
     display: block;
     clear: both;
+}
+
+/* Sphinx */
+#sphinx h1 {
+    font-size: 1.4em
+}
+#sphinx h2 {
+    font-size: 1.2em;
+}
+#sphinx h3 {
+    font-size: 1.2em;
+}
+#sphinx h4 {
+    font-size: 1em;
+}
+#sphinx h5 {
+    font-size: 1em;
+}
+#sphinx h6 {
+    font-size: .9em;
+}
+#sphinx ul {
+    padding-left: 10px;
+}
+
+#sphinx .inline-nav {
+    text-align: center;
+    display: block;
+}
+#sphinx #subhead {
+    text-align: center;
+    padding-bottom: 20px;
+}
+#sphinx h3 a {
+    color: #1a1006;
+    text-decoration: none;
+}
+#sphinx h1 a.headerlink,
+#sphinx h2 a.headerlink,
+#sphinx h3 a.headerlink,
+#sphinx h4 a.headerlink,
+#sphinx h5 a.headerlink,
+#sphinx h6 a.headerlink {
+    color: #fffff0;
+}
+#sphinx .headerlink:hover,
+#sphinx h1:hover .headerlink,
+#sphinx h2:hover .headerlink,
+#sphinx h3:hover .headerlink,
+#sphinx h4:hover .headerlink,
+#sphinx h5:hover .headerlink,
+#sphinx h6:hover .headerlink {
+    color: orangered;
+}
+
+#next-prev-nav {
+    display: inline;
+}
+#next-prev-nav li.prev {
+    float: left;
+}
+#next-prev-nav li.next {
+    float: right;
 }
