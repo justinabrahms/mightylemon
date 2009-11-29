@@ -14,4 +14,5 @@ http://django-tagging.googlecode.com/svn/trunk/
 http://dist.repoze.org/PIL-1.1.6.tar.gz
 -e hg+https://sorl-thumbnail.googlecode.com/hg/#egg=sorl_thumbnail
 -e svn+http://typogrify.googlecode.com/svn/trunk/#egg=typogrify
+-e git+git://github.com/robhudson/django-debug-toolbar.git#egg=debug_toolbar
 smartypants
