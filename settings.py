@@ -66,11 +66,13 @@ MIDDLEWARE_CLASSES = (
     "django.contrib.auth.middleware.AuthenticationMiddleware",
     "django.middleware.doc.XViewMiddleware",
 
+    'debug_toolbar.middleware.DebugToolbarMiddleware',
+
     "blog.middleware.BlogMiddleware",
 )
 
 ROOT_URLCONF = "mightylemon.urls"
-
+INTERNAL_IPS = ('127.0.0.1',)
 THEME = "oebfare"
 
 THEME_DIR = os.path.join(PROJECT_ROOT, "themes", THEME)
@@ -96,11 +98,14 @@ INSTALLED_APPS = (
     "gravatar",
     "portfolio",
     "typogrify",
+    "speaking",
+    "codingrepo",
 
     # misc. extras
     "wsgi",
     "mailer",
     "django_extensions",
+    "debug_toolbar",
    
     "django.contrib.admin",
     "django.contrib.auth",
