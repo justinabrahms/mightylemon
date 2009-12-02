@@ -164,6 +164,14 @@ a:hover {
     width: 460px;
     overflow: auto;
 }
+.comment {
+    clear: both;
+}
+#comment_form label {
+    width: 150px;
+    float: left;
+    display: block;
+}
 
 /* About Page */
 #about #about_photo {
