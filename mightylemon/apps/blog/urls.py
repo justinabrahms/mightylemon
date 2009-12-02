@@ -40,5 +40,4 @@ urlpatterns = patterns("",
 
     url(r"^$", archive_index, date_based_dict, name="blog_archive_index"),
 
-    url(r"^archive/$", archive_full, name="blog_archive_full"),
 )
