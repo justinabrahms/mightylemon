@@ -5,30 +5,70 @@
 
 {% block content %}
 <div id="content" class="grid_16">
-  <div class="grid_4 alpha">
-    <h3 class="grid_4 alpha coufon">{{ post.title|typogrify }}</h3>
-    <h5 class="date">{{ post.pub_date|date:"F jS, Y" }}</h5>
-  </div>
-  <div class="grid_9">
-    {{ post|to_html|typogrify }}
-  </div>
-  <div id="detail-sidebar" class="sidebar grid_3 omega">
-    <div>
-      <h3 class="header">By Date</h3>
-      <ul>
-        <li><a href="#">October 2009</a></li>
-        <li><a href="#">September 2009</a></li>
-        <li><a href="#">August 2009</a></li>
-      </ul>
+  <div>
+    <div class="grid_4 alpha">
+      <h3 class="grid_4 alpha coufon">{{ post.title|typogrify }}</h3>
+      <h5 class="date">{{ post.pub_date|date:"F jS, Y" }}</h5>
     </div>
-    <div>
+    <div class="grid_9">
+      {{ post|to_html|typogrify }}
+    </div>
+    <div id="detail-sidebar" class="sidebar grid_3 omega">
+  {% load tagging_tags %}
+  {% tags_for_object post as tags %}
+  {% if tags %}
+      <div>
+        <h3 class="header">By Tag</h3>
+        <ul>
+          {% for tag in tags %}
+          <li><a href="{% url blog_tag_detail tag %}">{{ tag }}</a></li>
+          {% endfor %}
+        </ul>
+      </div>
       <hr class="blank" />
-      <h3 class="header">By Tag</h3>
-      <ul>
-        <li><a href="#">Django</a></li>
-        <li><a href="#">NYC</a></li>
-        <li><a href="#">Productivity</a></li>
-      </ul>
+  {% endif %}
+      {% comment %}
+      {# Decided not to leave this in. Not sure I really like it. #}
+      <div>
+        <h3 class="header">By Date</h3>
+        <ul>
+          <li><a href="#">October 2009</a></li>
+          <li><a href="#">September 2009</a></li>
+          <li><a href="#">August 2009</a></li>
+        </ul>
+      </div>
+      {% endcomment %}
+    </div>
+  </div>
+  {% load comments %}
+  {% get_comment_list for post as comment_list %}
+  {% if comment_list %}
+  <hr class="blank" />
+  <div class="grid_13 suffix_3">
+    <h2 id="c">Comments</h2>
+    {% for comment in comment_list %}
+    <div class="comment {{ comment.user_name|slugify }}">
+      <div class="grid_4 alpha">
+        {% if comment.user %}
+            {{ comment.user.first_name }} {{ comment.user.last_name }}
+        {% else %}
+            {% if comment.url %}
+            <a href="{{ comment.url }}">{{ comment.user_name }}</a>
+            {% else %}
+            {{ comment.user_name }}
+            {% endif %}
+        {% endif %}
+        <h6 class="date">{{ comment.submit_date|date:"F jS, Y" }}</h6>
+      </div>
+      <div class="grid_9 omega" id="comment{{comment.pk}}">
+        {{ comment.comment|urlizetrunc:"25"|linebreaks }}
+      </div>
+    </div>
+    {% endfor %}
+    {% endif %}
+    <div class="prefix_4 grid_9">
+      <h2 id="add-your-comment">Add Your Comment</h2>
+      {% render_comment_form for post %}
     </div>
   </div>
 </div><!-- /#content -->
