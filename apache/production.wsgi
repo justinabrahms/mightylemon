@@ -1,7 +1,7 @@
 import os, sys, site
 sys.path.append('/var/www/')
 sys.path.append('/var/www/mightylemon/apps')
-site.addsitedir('/var/www/mightylemon/env/lib/python2.5/site-packages')
+site.addsitedir('/var/www/mightylemon/env/lib/python2.6/site-packages')
 
 os.environ['DJANGO_SETTINGS_MODULE'] = 'mightylemon.settings'
 
