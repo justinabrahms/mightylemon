@@ -40,7 +40,7 @@
       {% endifnotequal %}
     </div>
     {% endif %}
-    <p>{{ project.short_description }}</p>
+    <p>{{ project.short_description|safe }}</p>
   </div>
   <div class="grid_4 omega">
     <dl>
