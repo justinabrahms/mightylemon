@@ -64,8 +64,7 @@ def markdown_to_html(text):
     Convert markdown to HTML with code hiliting
     """
     md = MARKDOWN
-    md.source = text
-    return unicode(md)
+    return md.convert(text)
 
 def to_html(obj):
     """
