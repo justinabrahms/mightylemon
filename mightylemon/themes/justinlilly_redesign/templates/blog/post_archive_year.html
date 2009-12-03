@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% load blog_utils %}
+{% block body_id %}writing{% endblock %}
+{% block content %}
+      <div id="content" class="grid_16">
+        <h2>Posts in {{ year }}</h2>
+        {% for post in object_list %}
+        <div id="{% cycle 'left_col' 'right_col' %}" class="grid_8 {% cycle 'alpha' 'omega' %}">
+          <div class="post">
+            <h2 class="title coufon"><a href="{{ post.get_absolute_url }}">{{ post.title }}</a></h2>
+            <h5 class="date">{{ post.pub_date|date:"F jS, Y" }}</h5>
+            <p>{{ post|to_html|striptags|truncatewords:30 }}</p>
+          </div>
+        </div>
+        {% endfor %}
+      </div><!-- /#content -->
+{% endblock %}

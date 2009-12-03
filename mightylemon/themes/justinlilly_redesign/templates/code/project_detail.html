@@ -1,0 +1,59 @@
+{% extends "base.html" %}
+
+{% block body_id %}coding{% endblock %}
+
+{% block content %}
+<div id="content" class="grid_16">
+  <div class="prefix_2 grid_12 suffix_2">
+    <div style="text-align: center;">
+      <h1 id="project_name">{{ project.name }}</h1>
+    </div>
+    <div id="project_info" class="clearfix">
+      <div class="grid_3 alpha">
+        <h5>Language</h5>
+        <h6>{{ project.languages.all|join:", " }}</h6>
+      </div>
+      <div class="grid_3">
+        <h5>Download</h5>
+        <h6><a href="#">git</a>, <a href="#">zip</a></h6>
+      </div>
+      <div class="grid_3">
+        <h5>Updated</h5>
+        {% if project.last_updated %}
+        <h6>{{ project.last_updated|timesince }}"</h6>
+        {% else %}
+        <h6>?</h6>
+        {% endif %}
+      </div>
+      <div class="grid_3 omega">
+        <h5>Liscence</h5>
+        <h6>{{ project.code_license }}</h6>
+      </div>
+    </div>
+    <p>Lorem Ipsum is simply dummy text of the printing and
+      typesetting industry. Lorem Ipsum has been the industry's standard
+      dummy text ever since the 1500s, when an unknown printer took a
+      galley of type and scrambled it to make a type specimen book. It
+      has survived not only five centuries, but also the leap into
+      electronic typesetting, remaining essentially unchanged. It was
+      popularised in the 1960s with the release of Letraset sheets
+      containing Lorem Ipsum passages, and more recently with desktop
+      publishing software like Aldus PageMaker including versions of
+      Lorem Ipsum.</p>
+
+    <script src="http://gist.github.com/217363.js"></script>
+
+    <p>Lorem Ipsum is simply dummy text of the printing and
+      typesetting industry. Lorem Ipsum has been the industry's standard
+      dummy text ever since the 1500s, when an unknown printer took a
+      galley of type and scrambled it to make a type specimen book. It
+      has survived not only five centuries, but also the leap into
+      electronic typesetting, remaining essentially unchanged. It was
+      popularised in the 1960s with the release of Letraset sheets
+      containing Lorem Ipsum passages, and more recently with desktop
+      publishing software like Aldus PageMaker including versions of
+      Lorem Ipsum.</p>
+
+  </div>
+</div><!-- /#content -->
+{% endblock %}

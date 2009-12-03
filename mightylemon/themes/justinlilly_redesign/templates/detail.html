@@ -1,0 +1,86 @@
+
+{% extends "base.html" %}
+
+{% block body_id %}writing-detail{% endblock %}
+
+{% block content %}
+<div id="content" class="grid_16">
+  <div class="grid_4 alpha">
+    <h3 class="grid_4 alpha coufon">A fix for your fixtures and your models subdir</h3>
+    <h5 class="date">October 19th, 1948</h5>
+  </div>
+  <div class="grid_9">
+    <p>For those of you who keep your models in a subdirectory,
+      you may have noticed that you can't properly load
+      fixtures. This is because Django checks for the location of
+      your models file to determine your app directory. To fix
+      this, move your models directory to something like modeldir
+      and create a models.py which imports the models from inside.</p>
+
+    <h5>Before:</h5>
+    <p><pre>
+        myapp
+        |__ views.py
+        |__ __init__.py
+        |__ models/
+        |____ __init__.py
+        |____ mymodel1.py
+        |____ mymodel2.py
+    </pre></p>
+
+    <h5>After:</h5>
+
+    <p><pre>
+        myapp
+        |__ views.py
+        |__ __init__.py
+        |__ modeldir/
+        |____ __init__.py
+        |____ mymodel1.py
+        |____ mymodel2.py
+        |__ models.py
+    </pre></p>
+
+    <p>Where the contents of models.py is:</p>
+    <pre>
+      from myapp.modeldir.mymodel1 import *
+      from myapp.modeldir.mymodel2 import *
+    </pre>
+
+    <p>Some folks say that if you have too much code for a single
+      models file, you need to split it into an entirely different
+      application. I think they have a point, but for my particular
+      use case, it just happened that we have one model with a bunch
+      of business rules attached which makes for difficult to scroll
+      code.</p>
+
+    <p><em>UPDATE: A few people asked why not just put the imports
+        into the init.py? That was my original approach, which led to
+        the issues. For fixture loading, django attempts to import
+        models, which returns myapp/models/init.py. It then gets the
+        directory of this module, myapp/models/ and attempts to find a
+        fixtures directory below that, or myapp/models/fixtures. To
+        circumvent this, you have to make a models.py file which
+        imports from the other directory.</em></p>
+  </div>
+  <div id="detail-sidebar" class="sidebar grid_3 omega">
+    <div>
+      <h3 class="header">By Date</h3>
+      <ul>
+        <li><a href="#">October 2009</a></li>
+        <li><a href="#">September 2009</a></li>
+        <li><a href="#">August 2009</a></li>
+      </ul>
+    </div>
+    <div>
+      <hr class="blank" />
+      <h3 class="header">By Tag</h3>
+      <ul>
+        <li><a href="#">Django</a></li>
+        <li><a href="#">NYC</a></li>
+        <li><a href="#">Productivity</a></li>
+      </ul>
+    </div>
+  </div>
+</div><!-- /#content -->
+{% endblock %}

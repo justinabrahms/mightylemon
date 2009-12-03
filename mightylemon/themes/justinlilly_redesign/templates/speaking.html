@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% block body_id %}speaking{% endblock %}
+{% block content %}
+<div id="content" class="grid_16">
+  {{ talks }}
+  {% for talk in talk_list %}
+  <div class="talk">
+    <div class="grid_4 alpha conference_name">
+      <h3>{{ talk.name }}</h3>
+      <h5 class="date">{{ talk.date|date:"F jS, Y" }}</h5>
+    </div>
+    <div class="grid_8">
+      {{ talk.short_description|safe }}
+    </div>
+    <div class="grid_4 omega sidebar">
+      {% if talk.links.count %}
+      <h5 class="header">Links</h5>
+      <ul>
+      {% for link in talk.links.all %}
+        <li><a href="{{ link.url }}">{{ link.name }}</a></li>
+      {% endfor %}
+      </ul>
+      {% else %}
+      <p>&nbsp;</p>
+      {% endif %}
+    </div>
+  </div>  
+  {% endfor %}
+</div><!-- /#content -->
+{% endblock %}

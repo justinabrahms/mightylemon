@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block body_id %}coding{% endblock %}
+
+{% block content %}
+<div id="content" class="grid_16">
+  <div class="grid_10 alpha">
+    {% for project in project_list %}
+    <div class="grid_5 code-project {% cycle "alpha" "omega" %}">
+      <h2 class="title coufon"><a href="{% url code-detail project.slug %}">{{ project.name }}</a></h2>
+      <p>{{ project.short_desc }}</p>
+    </div>
+    {% endfor %}
+  </div>
+  <div class="grid_6 omega sidebar">
+    <h1 class="header">Coding</h1>
+    <p>This a place for personal projects and code samples. All this
+    code is released under the BSD License unless otherwise noted.</p>
+
+  </div>
+</div><!-- /#content -->
+{% endblock %}
