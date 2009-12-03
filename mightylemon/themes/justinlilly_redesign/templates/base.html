@@ -68,5 +68,10 @@
     </div> <!-- /#footer -->
     <script type="text/javascript"> Cufon.now(); </script>
     {% block extra_js_bottom %}{% endblock %} 
+    {% if STATS_CODE %}
+    {% autoescape off %}
+    {{ STATS_CODE }}
+    {% endautoescape %}
+    {% endif %}
   </body>
 </html>
