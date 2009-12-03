@@ -14,7 +14,7 @@
     </div>
     <div class="grid_4 omega sidebar">
       {% if talk.links.count %}
-      <h5>Links</h5>
+      <h5 class="header">Links</h5>
       <ul>
       {% for link in talk.links.all %}
         <li><a href="{{ link.url }}">{{ link.name }}</a></li>
