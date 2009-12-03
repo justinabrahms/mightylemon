@@ -104,7 +104,6 @@ a:hover {
     min-height: 200px;
 }
 .title {
-    margin-bototm: 10px;
     font-size: 1.2em;
     color: #3c3226;
 }
@@ -117,10 +116,9 @@ a:hover {
     text-decoration: underline;
 }
 .date {
-    color: #ccc;
+    color: #b69e79;
     font-style: italic;
     font-size: .9em;
-    margin-bottom: 10px;
 }
 .read_more {
     font-style: italic;
