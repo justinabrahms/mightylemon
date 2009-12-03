@@ -167,6 +167,9 @@ a:hover {
 .comment {
     clear: both;
 }
+#writing-detail .comment .date {
+    padding: 0;
+}
 #comment_form label {
     width: 150px;
     float: left;
@@ -261,6 +264,7 @@ hr.blank {
     margin-bottom: 10px;
     min-height: 200px;
     height: 250px;
+    border: 1px solid #ccc;
 }
 .carousel-wrapper .button {
     position: absolute;
@@ -274,6 +278,7 @@ hr.blank {
 .carousel-wrapper .next {
     right: -15px;
 }
+
     
 
 /* GLOBAL EXTRAS */
