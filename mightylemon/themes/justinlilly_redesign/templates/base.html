@@ -47,26 +47,26 @@
         <div class="prefix_2 grid_2">
           <h3>Around Town</h3>
           <ul>
-            <li><a href="#">Twitter</a></li>
-            <li><a href="#">Flickr</a></li>
-            <li><a href="#">Facebook</a></li>
+            <li><a href="http://twitter.com/justinlilly/">Twitter</a></li>
+            <li><a href="http://justinlilly.tumblr.com/">Tumblr</a></li>
+            <li><a href="http://facebook.com/justinlilly/">Facebook</a></li>
           </ul>
         </div>
         <div class="grid_2 omega">
-          <h3>RSS Feeds</h3>
-          <ul>
-            <li><a href="#">Blog</a></li>
-            <li><a href="#">Commits</a></li>
-            <li><a href="#">Portfolio</a></li>
-            <li><a href="#">All Feeds</a></li>
+          <h3>Archives</h3>
+          <ul class="grid_2 alpha">
+            {% for date in POST_DATE_MONTHS %}
+            <li><a href="{% url blog_archive_month date|date:"Y", date|date:"M"|lower %}">{{ date|date:"F Y" }}</a></li>
+            {% endfor %}
+            {% for date in POST_DATE_YEARS %}
+            <li><a href="{% url blog_archive_year date|date:"Y" %}">All of {{ date|date:"Y" }}</a></li>
+            {% endfor %}
           </ul>
         </div>
 
       </div>
-
-
-
     </div> <!-- /#footer -->
     <script type="text/javascript"> Cufon.now(); </script>
+    {% block extra_js_bottom %}{% endblock %} 
   </body>
 </html>
