@@ -58,6 +58,7 @@ TEMPLATE_CONTEXT_PROCESSORS = (
 
     "blog.context_processors.blog",
     "blog.context_processors.stats",
+    "blog.context_processors.date_ranges",
 )
 
 MIDDLEWARE_CLASSES = (
