@@ -15,11 +15,11 @@
 html {
     padding-bottom: 0;
     margin-bototm: 0;
+    background-color: #1a1006;
 }
 body {
     font-family: Georgia, "Times New Roman", Times, serif;
     color: #333;
-    background-color: #FFFFF0;
     line-height: 1.6em
 }
 h1 { 
@@ -52,7 +52,6 @@ a:hover {
 
 /* HEADER */
 #header {
-    background-color: #1a1006;
     width: 100%;
 }
 #masthead {
@@ -107,6 +106,9 @@ a:hover {
     font-size: 1.2em;
     color: #3c3226;
 }
+.coufon {
+    padding-bottom: 0;
+}
 /* Over specific to override the content styling */
 #content .title a {
     color: #3c3226;
@@ -129,13 +131,12 @@ a:hover {
 
 /* FOOTER */
 #footer {
-    background-color: #1a1006;
     width: 100%;
     clear: both;
     color: #eee;
     border-top: 15px solid orangered;
     padding: 20px 0;
-    margin-top: 20px;
+    /* margin-top: 20px; */
 }
 #footer p {
     color: #b69e79;
@@ -280,6 +281,9 @@ hr.blank {
     
 
 /* GLOBAL EXTRAS */
+#content-wrap {
+    background-color: #FFFFF0;
+}
 .clearfix:after {
     content: ".";
     min-height: 1%;
