@@ -58,7 +58,6 @@ a:hover {
     width: 960px;
     margin: auto;
     padding-bottom: 10px;
-    margin-bottom: 15px;
 }
 #logo {
     color: #b69e79;
@@ -282,6 +281,7 @@ hr.blank {
 
 /* GLOBAL EXTRAS */
 #content-wrap {
+    padding-top: 15px;
     background-color: #FFFFF0;
 }
 .clearfix:after {
