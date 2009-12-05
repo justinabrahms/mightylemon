@@ -7,8 +7,8 @@
   <div class="grid_10 alpha">
     {% for project in project_list %}
     <div class="grid_5 code-project {% cycle "alpha" "omega" %}">
-      <h2 class="title coufon"><a href="{% url code-detail project.slug %}">{{ project.name }}</a></h2>
-      <p>{{ project.short_desc }}</p>
+      <h2 class="title coufon"><a href="{{ project.url }}">{{ project.name }}</a></h2>
+      <p>{{ project.short_desc|safe }}</p>
     </div>
     {% endfor %}
   </div>
