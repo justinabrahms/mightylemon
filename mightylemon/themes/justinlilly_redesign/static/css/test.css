@@ -183,6 +183,11 @@ a:hover {
     float: right;
 }
 
+/* Seaking Page */
+.talk {
+    clear: both;
+}
+
 /* Work Page */
 #work .client_name,
 #speaking .conference_name {
