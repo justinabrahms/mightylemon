@@ -4,7 +4,7 @@
 <div id="content" class="grid_16">
   {{ talks }}
   {% for talk in talk_list %}
-  <div class="talk">
+  <div class="talk clearfix">
     <div class="grid_4 alpha conference_name">
       <h3>{{ talk.name }}</h3>
       <h5 class="date">{{ talk.date|date:"F jS, Y" }}</h5>
