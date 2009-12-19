@@ -33,6 +33,10 @@ class Project(models.Model):
     url = models.URLField()
     order = models.PositiveIntegerField(default=0)
 
+    @property
+    def ordered_photos(self):
+        return self.photos.order_by('projectphotoorganizer__order')
+
     class Meta:
         ordering = ('order',)
     

@@ -28,7 +28,7 @@
       <div class="carousel-wrapper">
         <div class="carousel">
           <ul>
-            {% for photo in project.photos.all|dictsort:"order" %}
+            {% for photo in project.ordered_photos %}
             <li><img src="{{ photo.image.thumbnail }}" width="{{ photo.image.thumbnail.width }}" height="{{ photo.image.thumbnail.height }}" alt="{{ photo.name }}"/></li>
             {% endfor %}
           </ul>
