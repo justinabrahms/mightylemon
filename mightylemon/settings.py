@@ -74,7 +74,7 @@ MIDDLEWARE_CLASSES = (
 
 ROOT_URLCONF = "mightylemon.urls"
 INTERNAL_IPS = ('127.0.0.1',)
-THEME = "oebfare"
+THEME = "justinlilly_redesign"
 
 THEME_DIR = os.path.join(PROJECT_ROOT, "themes", THEME)
 
