@@ -74,7 +74,7 @@ MIDDLEWARE_CLASSES = (
 
 ROOT_URLCONF = "mightylemon.urls"
 INTERNAL_IPS = ('127.0.0.1',)
-THEME = "oebfare"
+THEME = "justinlilly_redesign"
 
 THEME_DIR = os.path.join(PROJECT_ROOT, "themes", THEME)
 
@@ -90,15 +90,17 @@ MEDIA_ROOT = os.path.realpath(os.path.join(THEME_DIR, "static"))
 STATS_CODE = ""  # contains stats tracking code
 
 INSTALLED_APPS = (
-    # Blog functionality
-    "blog",
-    "authors",
-    "links",
+    # 3rd party
     "tagging",
     "comment_utils",
     "gravatar",
-    "portfolio",
     "typogrify",
+
+    # Our Stuff
+    "blog",
+    "authors",
+    "links",
+    "portfolio",
     "speaking",
     "codingrepo",
 
